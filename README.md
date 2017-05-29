@@ -11,6 +11,8 @@ This assignment is tailored to the Star Wars API GraphQL interface so all requir
 - [Star Wars API Docs](https://swapi.co/documentation)
 - [Star Wars API GraphiQL interface](http://graphql.org/swapi-graphql)
 
+A very basic design can be found in the `assets` directory, do not feel bound to this design it is only there to give you an idea of what an interface for this app might look like.
+
 ## Assignment
 
 **Server**
