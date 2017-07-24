@@ -28,6 +28,11 @@ Create a form which behaves as follows:
   - A list of characters, on load there is no character selected.
 - At the bottom of the form all characters that match the top criteria.
 
+Each dropdown will act like a filter on the next dropdowns.
+So when I select "A New Hope" as a movie, the only species remaining would be the once featured in "A New Hope".
+And the list of characters would only hold those featured in "A New Hope".
+This will create the behavior that you will be able to filter until only one character listed below the dropdowns.
+
 # High level requirements
 - Project should be documented
 - Project should run with one command
