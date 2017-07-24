@@ -31,7 +31,7 @@ Create a form which behaves as follows:
 Each dropdown will act like a filter on the next dropdowns.
 So when I select "A New Hope" as a movie, the only species remaining would be the once featured in "A New Hope".
 And the list of characters would only hold those featured in "A New Hope".
-This will create the behavior that you will be able to filter until only one character listed below the dropdowns.
+Once the first filter is applied you should display the characters matching the criteria and update on each applied filter until only one remains.
 
 # High level requirements
 - Project should be documented
