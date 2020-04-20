@@ -8,8 +8,7 @@ One of the last things remaining is a small test case to measure your level of s
 In this assignment you will be working with Node.js, React.js, GraphQL and anything cool you might want to add.
 This assignment is tailored to the Star Wars API GraphQL interface so all required data can be fetched from there.
 
-- [Star Wars API Docs](https://swapi.co/documentation)
-- [Star Wars API GraphiQL interface](http://graphql.org/swapi-graphql)
+- [Star Wars API GraphiQL interface](https://swapi.graph.cool/)
 
 A very basic design can be found in the `assets` directory, do not feel bound to this design it is only there to give you an idea of what an interface for this app might look like.
 
