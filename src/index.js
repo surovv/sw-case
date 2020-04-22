@@ -5,6 +5,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { client as apolloClient } from './apollo.index';
 
 import App from './app';
+import ErrorBoundary from './error-boundary';
 import './index.css';
 
 import * as serviceWorker from './serviceWorker';
@@ -12,9 +13,11 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <StrictMode>
-    <ApolloProvider client={apolloClient}>
-      <App />
-    </ApolloProvider>
+    <ErrorBoundary>
+      <ApolloProvider client={apolloClient}>
+        <App />
+      </ApolloProvider>
+    </ErrorBoundary>
   </StrictMode>,
   document.getElementById('root'),
 );
