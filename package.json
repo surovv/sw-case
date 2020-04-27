@@ -8,14 +8,21 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "apollo-boost": "^0.4.7",
+    "apollo-link-http": "^1.5.17",
+    "apollo-server": "^2.12.0",
     "graphql": "^15.0.0",
+    "graphql-tools": "^5.0.0",
+    "node-fetch": "^2.6.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:server": "nodemon -r esm server.js",
+    "start:client": "react-scripts start",
+    "start": "yarn install && (yarn start:server & yarn start:client)",
+    "start-with-npm": "npm install && (npm run start:server & npm run start:client)",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -36,12 +43,16 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
     "babel-eslint": "^10.1.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb": "18.1.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "2.5.0"
+    "eslint-plugin-react-hooks": "2.5.0",
+    "esm": "^3.2.25",
+    "nodemon": "^2.0.3"
   }
 }
