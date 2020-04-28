@@ -1,13 +1,22 @@
 .root {
   min-height: 100vh;
-  width: 100wh;
+  width: 100vw;
   background-image: url('./assets/background.jpg');
 
   display: flex;
   justify-content: center;
+
+  overflow: scroll;
 }
 
 .content {
   max-width: 1280px;
+  width: 100%;
   padding: 20px;
+}
+
+.logo {
+  width: 90%;
+  margin: auto;
+  display: flex;
 }
