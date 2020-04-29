@@ -1,0 +1,39 @@
+.root {
+  margin: 40px;
+  box-shadow: 0 0 10px 4px white;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 240px;
+}
+
+.root:hover {
+  box-shadow: 0 0 10px 4px gold;
+}
+
+
+.avatar {
+  width: 100%;
+}
+
+.name {
+  padding: 16px 14px;
+  color: #595959;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.films {
+  padding: 0 14px 30px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.filmsLabel {
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: slategray;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
