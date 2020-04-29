@@ -1,0 +1,11 @@
+.charactersList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.noCharacters {
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
