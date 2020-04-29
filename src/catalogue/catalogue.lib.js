@@ -2,7 +2,7 @@ export const filtersData = {
   films: {
     queryName: 'allFilms',
     queryAttrs: `{
-      id
+      value: id
       label: title
     }`,
     getCustomFIlters: ({ person, ...restFilters }) => ({
@@ -13,7 +13,7 @@ export const filtersData = {
   species: {
     queryName: 'allSpecies',
     queryAttrs: `{
-      id
+      value: id
       label: name
     }`,
     getCustomFIlters: ({ person, ...restFilters }) => ({
@@ -24,7 +24,7 @@ export const filtersData = {
   person: {
     queryName: 'allPersons',
     queryAttrs: `{
-      id
+      value: id
       label: name
     }`,
   },

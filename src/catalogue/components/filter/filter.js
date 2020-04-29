@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import Dropdown from 'react-dropdown-now';
+import 'react-dropdown-now/style.css';
 
 import { client } from '../../../apollo.index';
 import { getOptionsQuery } from './filter.lib';
+import styles from './filter.module.css';
 
 const Filter = ({
   allFilters, filterName, queryName, queryAttrs, onChange,
 }) => {
-  const handleChange = (event) => onChange({ [filterName]: event.target.value });
+  const handleChange = ({ value }) => onChange({ [filterName]: value });
+
   const { [filterName]: currentOption, ...filters } = allFilters;
 
   const [options, setOptions] = useState([]);
@@ -23,17 +27,12 @@ const Filter = ({
   );
 
   return (
-    <select value={currentOption} onChange={handleChange}>
-      <option disabled selected value>Select</option>
-      {options.map((option) => (
-        <option
-          key={option.id}
-          value={option.id}
-        >
-          {option.label}
-        </option>
-      ))}
-    </select>
+    <Dropdown
+      options={options}
+      onChange={handleChange}
+      placeholder={`Select ${filterName}`}
+      className={styles.root}
+    />
   );
 };
 

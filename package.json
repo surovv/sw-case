@@ -16,6 +16,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-dropdown-now": "^2.0.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
@@ -23,6 +24,7 @@
     "start:client": "react-scripts start",
     "start": "yarn install && (yarn start:server & yarn start:client)",
     "start-with-npm": "npm install && (npm run start:server & npm run start:client)",
+    "eslint": "eslint src",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
