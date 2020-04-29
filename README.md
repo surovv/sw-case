@@ -1,3 +1,12 @@
+![status badge](https://github.com/surovv/sw-case/workflows/build%20and%20testing/badge.svg)
+
+
+In the project directory run
+##### `yarn start`
+or
+##### `npm run start-with-npm`
+#
+
 ![Sensorfact](http://i.imgur.com/z3Dkolg.png)
 ## Introduction
 
