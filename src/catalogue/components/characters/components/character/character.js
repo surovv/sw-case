@@ -27,7 +27,11 @@ Character.propTypes = {
   character: PropTypes.shape({
     avatar: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    films: PropTypes.arrayOf(PropTypes.string).isRequired,
+    films: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
   }).isRequired,
 };
 
