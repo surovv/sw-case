@@ -16,6 +16,8 @@ const Filter = ({
 
   const [options, setOptions] = useState([]);
 
+  const stringifiedFilters = JSON.stringify(filters);
+
   useEffect(
     () => {
       client.query({
@@ -23,7 +25,8 @@ const Filter = ({
       })
         .then(({ data }) => setOptions(data.options));
     },
-    [JSON.stringify(filters)],
+    // eslint-disable-next-line
+    [stringifiedFilters],
   );
 
   return (
