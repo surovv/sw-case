@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { client } from '../../../apollo.index';
-import { queries } from './filter.queries';
+import { getOptionsQuery } from './filter.lib';
 
-const Filter = ({ allFilters, filterName, onChange }) => {
+const Filter = ({
+  allFilters, filterName, queryName, queryAttrs, onChange,
+}) => {
   const handleChange = (event) => onChange({ [filterName]: event.target.value });
   const { [filterName]: currentOption, ...filters } = allFilters;
 
@@ -13,8 +15,7 @@ const Filter = ({ allFilters, filterName, onChange }) => {
   useEffect(
     () => {
       client.query({
-        query: queries[filterName],
-        variables: filters,
+        query: getOptionsQuery(queryName, filters, queryAttrs),
       })
         .then(({ data }) => setOptions(data.options));
     },
@@ -39,6 +40,8 @@ const Filter = ({ allFilters, filterName, onChange }) => {
 Filter.propTypes = {
   filterName: PropTypes.string.isRequired,
   allFilters: PropTypes.shape({}).isRequired,
+  queryName: PropTypes.string.isRequired,
+  queryAttrs: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
